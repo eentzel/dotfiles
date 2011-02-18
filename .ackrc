@@ -1,0 +1,2 @@
+# ignore case if pattern contains no uppercase chars
+--smart-case
