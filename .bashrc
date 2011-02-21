@@ -4,7 +4,7 @@ if [ -f ~/.bashrc_local ]; then
    source ~/.bashrc_local
 fi
 
-export PATH=/opt/local/bin:~/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=$PATH:/opt/local/lib/postgresql83/bin
 export MANPATH=$MANPATH:/opt/local/share/man
