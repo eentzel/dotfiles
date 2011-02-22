@@ -21,6 +21,13 @@ source ~/.git-completion.bash
 
 shopt -s histappend
 
+if [ -z `which wget` ]; then
+    wget () {
+        filename=`echo $1 | awk -F / '{print $NF}'`
+        curl $1 -o $filename
+    }
+fi
+
 # locate source for a Python module
 # from: http://chris-lamb.co.uk/2010/04/22/locating-source-any-python-module/
 cdp () {
