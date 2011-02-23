@@ -23,6 +23,7 @@ shopt -s histappend
 
 if [ -z `which wget` ]; then
     wget () {
+        echo "wget is not intalled - faking it with 'curl -o'..."
         filename=`echo $1 | awk -F / '{print $NF}'`
         curl $1 -o $filename
     }
