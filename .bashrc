@@ -32,7 +32,7 @@ fi
 # locate source for a Python module
 # from: http://chris-lamb.co.uk/2010/04/22/locating-source-any-python-module/
 cdp () {
-  cd "$(python -c "import os.path as _, ${1}; \
+  pushd "$(python -c "import os.path as _, ${1}; \
     print _.dirname(_.realpath(${1}.__file__[:-1]))"
   )"
 }
