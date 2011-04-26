@@ -19,6 +19,8 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 export PATH
 source ~/.git-completion.bash
 
+# TODO: CDPATH (http://caliban.org/bash/)
+
 shopt -s histappend
 
 if [ -z `which wget` ]; then
