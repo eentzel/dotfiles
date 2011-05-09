@@ -7,6 +7,7 @@ fi
 export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=$PATH:/opt/local/lib/postgresql83/bin
+export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export MANPATH=$MANPATH:/opt/local/share/man
 export PS1="\[\033]0;\w\007\]\h:\W \u\$ "
 export LC_CTYPE=en_US.UTF-8
