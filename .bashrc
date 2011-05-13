@@ -4,12 +4,18 @@ if [ -f ~/.bashrc_local ]; then
    source ~/.bashrc_local
 fi
 
+function parse_git_branch {
+   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+   echo ""${ref#refs/heads/}""
+}
+
 export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=$PATH:/opt/local/lib/postgresql83/bin
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export MANPATH=$MANPATH:/opt/local/share/man
-export PS1="\[\033]0;\w\007\]\h:\W \u\$ "
+export PS1="\[\033]0;\w\007\]\h:\W \u [\$(parse_git_branch)]\$ "
+
 export LC_CTYPE=en_US.UTF-8
 export EDITOR="emacsclient -n"
 export SVN_EDITOR=emacsclient
