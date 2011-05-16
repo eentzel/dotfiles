@@ -16,7 +16,7 @@ export PATH=~/bin/SmallerMaker:$PATH
 export PATH=$PATH:/opt/local/lib/postgresql83/bin
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export MANPATH=$MANPATH:/opt/local/share/man
-export PS1="\[\033]0;\w\007\]\u@\h:\[$txtred\]\w \[$txtgrn\]$(parse_git_branch)\[$txtrst\]\$ "
+export PS1="\[\033]0;\w\007\]\u@\h:\[$txtred\]\w \[$txtgrn\]\$(parse_git_branch)\[$txtrst\]\$ "
 
 export LC_CTYPE=en_US.UTF-8
 export EDITOR="emacsclient -n"
