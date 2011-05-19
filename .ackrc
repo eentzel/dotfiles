@@ -8,3 +8,4 @@
 # define some types:
 --type-set=ftl=.ftl
 --type-set=prop=.properties
+--type-set=feature=.feature
