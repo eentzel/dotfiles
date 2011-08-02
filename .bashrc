@@ -15,7 +15,7 @@ export PATH=~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin/
-export PS1="\[\033]0;\w\007\]\u@\h:\[$txtred\]\w \[$txtgrn\]\$(parse_git_branch)\[$txtrst\]\$ "
+export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w \[$txtcyn\]\$(parse_git_branch)\[$txtrst\]\$ "
 
 export EDITOR="emacsclient -n"
 export SVN_EDITOR=emacsclient
