@@ -2,8 +2,8 @@
 --smart-case
 
 # set colors to be more visible on a light terminal bg:
---color-filename=bold dark
---color-lineno=bold red
+--color-filename=blue
+--color-lineno=yellow
 
 # define some types:
 --type-set=ftl=.ftl
