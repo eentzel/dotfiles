@@ -2,6 +2,7 @@
 export GRADLE_HOME=~/3rdparty/gradle
 export GRADLE_OPTS='-Dorg.gradle.daemon=true -Xmx512M -XX:MaxPermSize=256M'
 export PATH=${GRADLE_HOME}/bin:${PATH}
+alias push='jsptree index && gradle reaPrePush && git push origin master'
 
 # Tomcat
 export CATALINA_HOME=~/3rdparty/apache-tomcat-6.0.32
@@ -29,4 +30,8 @@ alias jshint=/Users/eric_entzel/3rdparty/jshint/env/jsc.sh
 nextid () {
     limit=${1:-30}
     grep -r listing_id: fixtures/test-data/ | awk "{print \$3}" | sort -n | tail -n $limit
+}
+
+duplicate_configs () {
+    grep '=' $1 | awk -F= "{print \$1}" | sort | uniq -c | grep -v ' *1'
 }
