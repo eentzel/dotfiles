@@ -10,6 +10,7 @@
 --type-set=prop=.properties
 --type-set=feature=.feature
 --type-set=jsp=.jsp,.jspx,.jhtm,.jhtml,.tag
+--type-set=gradle=gradle
 
 # ignore build artifacts by default:
 --ignore-dir=classes
