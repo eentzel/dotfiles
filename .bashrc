@@ -51,3 +51,10 @@ copyip () {
     addr=`ifconfig $1 inet | grep inet | awk '{print $2}'`
     echo -n $addr | pbcopy
 }
+
+# start a basic webserver in the current directory
+server() {
+  open "http://localhost:${1}" && python -m SimpleHTTPServer $1
+}
+
+alias json_pretty="python -mjson.tool"
