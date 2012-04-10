@@ -58,3 +58,4 @@ server() {
 }
 
 alias json_pretty="python -mjson.tool"
+alias nonascii='grep --color="auto" -P -n "[\x80-\xFF]"'
