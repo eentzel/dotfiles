@@ -1,5 +1,7 @@
 # Other env vars needed by GUI apps are set in ~/.MacOSX/environment.plist
 
+# TODO: https://github.com/joelthelion/autojump/wiki
+
 if [ -f ~/.bashrc_local ]; then
    source ~/.bashrc_local
 fi
