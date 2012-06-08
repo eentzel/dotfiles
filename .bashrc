@@ -6,18 +6,13 @@ if [ -f ~/.bashrc_local ]; then
    source ~/.bashrc_local
 fi
 
-function parse_git_branch {
-   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-   echo "("${ref#refs/heads/}")"
-}
-
 source ~/.colors.sh
 
 export PATH=~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin/
-export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w \[$txtcyn\]\$(parse_git_branch)\[$txtrst\]\$ "
+export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\]\$ "
 
 export EDITOR="emacsclient -n"
 export SVN_EDITOR=emacsclient
