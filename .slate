@@ -1,0 +1,5 @@
+bind l:shift;ctrl   push right bar-resize:screenSizeX/2
+bind h:shift;ctrl   push left  bar-resize:screenSizeX/2
+bind k:shift;ctrl   push up    bar-resize:screenSizeY/2
+bind j:shift;ctrl   push down  bar-resize:screenSizeY/2
+bind m:shift,ctrl   push up    bar-resize:screenSizeY
