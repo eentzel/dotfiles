@@ -26,6 +26,7 @@ source ~/.git-completion.bash
 # TODO: CDPATH (http://caliban.org/bash/)
 
 shopt -s histappend
+export HISTTIMEFORMAT='%F %T '
 
 if [ -z `which wget` ]; then
     wget () {
