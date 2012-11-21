@@ -23,9 +23,6 @@ alias bec='bundle exec cucumber'
 # JSHint
 alias jshint=/Users/eric_entzel/3rdparty/jshint/env/jsc.sh
 
-# RVM
-[[ -s "/Users/eric_entzel/.rvm/scripts/rvm" ]] && source "/Users/eric_entzel/.rvm/scripts/rvm"
-
 # Print the N highest (default 20) listing ids from test fixtures in ascending order
 nextid () {
     limit=${1:-30}
