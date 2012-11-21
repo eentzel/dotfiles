@@ -1,6 +1,6 @@
 # Gradle
 export GRADLE_HOME=~/3rdparty/gradle
-export GRADLE_OPTS='-Dorg.gradle.daemon=true -Xmx512M -XX:MaxPermSize=256M'
+export GRADLE_OPTS='-Xmx512M -XX:MaxPermSize=256M'
 export PATH=${GRADLE_HOME}/bin:${PATH}
 alias push='jsptree index && gradle reaPrePush && git push origin master'
 
