@@ -52,7 +52,7 @@ copyip () {
 
 # start a basic webserver in the current directory
 server() {
-  open "http://localhost:${1}" && python -m SimpleHTTPServer $1
+  open "http://localhost:${1}" && nohup python -m SimpleHTTPServer $1 &
 }
 
 alias json_pretty="python -mjson.tool"
