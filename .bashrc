@@ -14,7 +14,7 @@ export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin/
 export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\]\$ "
 
-export EDITOR="emacsclient -n"
+export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
 
 # Setting PATH for MacPython 2.6
