@@ -16,6 +16,10 @@ export PATH=$PATH:/usr/local/mysql/bin/
 export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
 
+# for node.js
+export PATH=$PATH:/usr/local/share/npm/bin
+export NODE_PATH=/usr/local/lib/node_modules
+
 if [ $EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
