@@ -12,10 +12,19 @@ export PATH=~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin/
-export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\]\$ "
 
 export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
+
+if [ $EMACS ]; then
+    # when running a shell inside emacs, pager just gets in the way
+    export PAGER=cat
+
+    # as do colored prompts
+    export PS1="\u@\h:\w\$(__git_ps1)\$ "
+else
+    export PS1="\[\033]0;\w\007\]\u@\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\]\$ "
+fi
 
 # Setting PATH for MacPython 2.6
 # The orginal version is saved in .profile.pysave
