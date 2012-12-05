@@ -38,7 +38,7 @@ shopt -s histappend
 export HISTTIMEFORMAT='%F %T '
 
 if [ -z `which wget` ]; then
-    alias wget="echo \"wget is not intalled - faking it with 'curl -o'...\" && curl -O"
+    alias wget="echo \"wget is not intalled - faking it with 'curl -o'...\" && curl -LO"
 fi
 
 # locate source for a Python module
