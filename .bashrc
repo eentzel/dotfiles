@@ -11,7 +11,7 @@ source ~/.colors.sh
 export PATH=~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-export PATH=$PATH:/usr/local/mysql/bin/
+export PATH=/usr/local/mysql/bin:$PATH
 
 export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
