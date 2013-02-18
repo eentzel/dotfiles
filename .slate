@@ -13,5 +13,10 @@ layout dual 'Emacs'                        push right bar-resize:screenSizeX/2 1
 bind u:shift,ctrl layout dual
 default dual resolutions:1920x1200;1280x800
 
+layout single 'iTerm'                      push up bar-resize:screenSizeY
+layout single 'Emacs'                      push up bar-resize:screenSizeY
+layout single 'Chrome'                     push up bar-resize:screenSizeY
+default single count:1
+
 bind 1:shift;cmd        throw 0
 bind 2:shift;cmd        throw 1
