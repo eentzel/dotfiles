@@ -20,6 +20,10 @@ export SVN_EDITOR=emacsclient
 export PATH=$PATH:/usr/local/share/npm/bin
 export NODE_PATH=/usr/local/lib/node_modules
 
+# for golang
+export GOPATH=$HOME/mygo
+export PATH=$PATH:$HOME/mygo/bin
+
 if [ $EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
