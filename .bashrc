@@ -68,5 +68,7 @@ server() {
   open "http://localhost:${1}" && nohup python -m SimpleHTTPServer $1 &
 }
 
+alias ll='ls -lhF'
+alias ee='emacsclient -n'
 alias json_pretty="python -mjson.tool"
 alias nonascii='grep --color="auto" -P -n "[\x80-\xFF]"'
