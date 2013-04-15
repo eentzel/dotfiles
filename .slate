@@ -12,7 +12,9 @@ layout dual 'Google Chrome':REPEAT         push left bar-resize:screenSizeX/2 1
 layout dual 'Emacs'                        push right bar-resize:screenSizeX/2 1
 bind u:shift,ctrl layout dual
 default dual resolutions:1920x1200;1280x800
+default dual resolutions:1280x800;1920x1200
 default dual resolutions:2560x1440;1280x800
+default dual resolutions:1280x800;2560x1440
 
 layout single 'iTerm'                      push up bar-resize:screenSizeY
 layout single 'Emacs'                      push up bar-resize:screenSizeY
