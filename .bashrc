@@ -59,7 +59,7 @@ cdp () {
 
 # Copy IP address of the specified interface to the OSX clipboard
 copyip () {
-    addr=`ifconfig $1 inet | grep inet | awk '{print $2}'`
+    addr=`ifconfig $1 inet | awk '/inet/ {print $2}'`
     echo -n $addr | pbcopy
 }
 
