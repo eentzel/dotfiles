@@ -40,6 +40,10 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 export PATH
 source ~/.git-completion.bash
 
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#     . $(brew --prefix)/etc/bash_completion
+# fi
+
 export AWS_CONFIG_FILE=~/.aws-creds
 if which -s aws_completer && which -s aws; then
     complete -C aws_completer aws
