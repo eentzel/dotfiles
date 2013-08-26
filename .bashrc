@@ -55,8 +55,10 @@ shopt -s histappend
 export HISTTIMEFORMAT='%F %T '
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -f HOME/.rbenv/bin ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
 
 if [ -z `which wget` ]; then
     alias wget="echo \"wget is not intalled - faking it with 'curl -o'...\" && curl -LO"
