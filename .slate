@@ -7,9 +7,9 @@ bind m:shift,ctrl   push up    bar-resize:screenSizeY
 layout dual 'Adium':TITLE_ORDER=Contacts   throw 0 resize:screenSizeX/5;screenSizeY | corner bottom-right resize:screenSizeX*4/5;screenSizeY*2/3 0
 layout dual 'Twitter'                      move screenOriginX+screenSizeX/5;screenOriginY screenSizeX*0.35;screenSizeY 0
 layout dual 'Mail'                         push left bar-resize:screenSizeX*2/3 1    # fails if a message window is top
-layout dual 'iTerm'                        move screenSizeX/6;screenSizeY/6 screenSizeX*2/3;screenSizeY*2/3
-layout dual 'Google Chrome':REPEAT         push left bar-resize:screenSizeX/2 1
-layout dual 'Emacs'                        push right bar-resize:screenSizeX/2 1
+layout dual 'Google Chrome':REPEAT         move 0;0 screenSizeX;screenSizeY 0
+layout dual 'iTerm'                        push right bar-resize:screenSizeX/2 1
+layout dual 'Emacs'                        push left bar-resize:screenSizeX/2 1
 bind u:shift,ctrl layout dual
 default dual resolutions:1920x1200;1280x800
 default dual resolutions:1280x800;1920x1200
