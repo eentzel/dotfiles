@@ -1,3 +1,7 @@
+# User ack options. Some of these could be perhaps moved to project-specific
+# config files with the advent of ack 2. See:
+#     http://beyondgrep.com/documentation/ack-2.08-man.html#ackrc_location_semantics
+
 # ignore case if pattern contains no uppercase chars
 --smart-case
 
