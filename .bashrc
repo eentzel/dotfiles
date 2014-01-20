@@ -6,6 +6,10 @@ if [ -f ~/.bashrc_local ]; then
    source ~/.bashrc_local
 fi
 
+if [ -f ~/.bashrc_private ]; then
+   source ~/.bashrc_private
+fi
+
 source ~/.colors.sh
 
 export PATH=~/bin:$PATH
