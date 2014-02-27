@@ -9,3 +9,12 @@ export PATH=${PATH}:~/3rdparty/grails/bin
 export PATH=${PATH}:~/3rdparty/groovy-2.1.6/bin
 
 alias pcli=". ~/3rdparty/python-cli-env/bin/activate"
+
+push_dashboard () {
+    curl http://${1}:9090/watch?rows=$(tput lines)
+}
+
+post_contact () {
+    curl -i -H "Content-type: application/json" -d @${1} \
+        "https://api.fullcontact.com/v2/contactLists/${2}/?accessToken=${3}"
+}
