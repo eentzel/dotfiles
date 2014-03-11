@@ -23,3 +23,7 @@ force_push () {
     curl -i -H "Content-type: application/json" -d @${1} \
         "https://api.fullcontact.com/v2/contactLists/${2}/_forcePushNewContacts?accessToken=${3}"
 }
+
+clean_sync () {
+    curl -i -XPOST "https://switchboard.fullcontact.com/sb/resync/${1}?clean=true"
+}
