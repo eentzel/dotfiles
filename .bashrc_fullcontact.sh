@@ -18,3 +18,8 @@ post_contact () {
     curl -i -H "Content-type: application/json" -d @${1} \
         "https://api.fullcontact.com/v2/contactLists/${2}/?accessToken=${3}"
 }
+
+force_push () {
+    curl -i -H "Content-type: application/json" -d @${1} \
+        "https://api.fullcontact.com/v2/contactLists/${2}/_forcePushNewContacts?accessToken=${3}"
+}
