@@ -3,4 +3,5 @@
     "~f" = "moveWordForward:";
     "~b" = "moveWordBackward:";
     "~l" = "lowercaseWord:";
+    "~c" = "capitalizeWord:";
 }
