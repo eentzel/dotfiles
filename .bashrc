@@ -61,6 +61,8 @@ export HISTTIMEFORMAT='%F %T '
 # rbenv
 if [ -f HOME/.rbenv/bin ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
+fi
+if which rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
 
