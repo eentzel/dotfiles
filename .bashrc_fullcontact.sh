@@ -10,6 +10,12 @@ export PATH=${PATH}:~/3rdparty/groovy-2.1.6/bin
 
 alias pcli=". ~/3rdparty/python-cli-env/bin/activate"
 
+#AWS
+export AWS_CREDENTIAL_FILE=~/.aws-creds-old-style
+export AWS_AUTO_SCALING_HOME=~/3rdparty/AutoScaling-1.0.61.5
+export AWS_ELB_HOME=~/3rdparty/ElasticLoadBalancing-1.0.34.0
+export PATH=${PATH}:${AWS_AUTO_SCALING_HOME}/bin:${AWS_ELB_HOME}/bin
+
 push_dashboard () {
     curl http://${1}:9090/watch?rows=$(tput lines)
 }
