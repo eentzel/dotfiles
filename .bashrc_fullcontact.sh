@@ -33,3 +33,10 @@ force_push () {
 clean_sync () {
     curl -i -XPOST "https://switchboard.fullcontact.com/sb/resync/${1}?clean=true"
 }
+
+tail_pull () {
+    nc sb-kibana.fullcontact.com 16384 \
+        | jq -r 'select(.facility == "switchboard-pull") | "\(.["@timestamp"]) \(.["pullRequest.source"]) \(.message)"'
+}
+
+alias coffee_time="rm -rf ~/.grails/.slcache && grails clean && grails -noreloading run-app"
