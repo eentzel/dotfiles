@@ -7,3 +7,9 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 
 # try this?
 # http://snarfed.org/emacs_keybindings_in_gnu_screens_copy-scrollback_mode
+
+# https://wiki.archlinux.org/index.php/GNU_Screen#Start_at_window_1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
