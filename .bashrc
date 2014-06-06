@@ -60,7 +60,7 @@ fi
 
 shopt -s histappend
 export HISTTIMEFORMAT='%F %T '
-export HISTSIZE=10000
+export HISTSIZE=100000
 
 # rbenv
 if [ -f HOME/.rbenv/bin ]; then
