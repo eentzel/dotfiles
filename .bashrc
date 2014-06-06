@@ -28,6 +28,9 @@ export NODE_PATH=/usr/local/lib/node_modules
 export GOPATH=$HOME/mygo
 export PATH=$PATH:$HOME/mygo/bin
 
+# docker
+export DOCKER_HOST=tcp://localhost:4243
+
 if [ $EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
