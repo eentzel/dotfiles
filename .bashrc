@@ -52,7 +52,7 @@ source ~/.git-completion.bash
 # fi
 
 export AWS_CONFIG_FILE=~/.aws-creds
-if which -s aws_completer && which -s aws; then
+if which aws_completer > /dev/null && which aws > /dev/null ; then
     complete -C aws_completer aws
 fi
 
