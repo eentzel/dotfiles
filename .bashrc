@@ -28,6 +28,10 @@ export NODE_PATH=/usr/local/lib/node_modules
 export GOPATH=$HOME/mygo
 export PATH=$PATH:$HOME/mygo/bin
 
+if [ -d ~/3rdparty/packer ]; then
+    export PATH=$PATH:~/3rdparty/packer
+fi
+
 # docker
 export DOCKER_HOST=tcp://localhost:4243
 
