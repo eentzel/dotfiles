@@ -97,6 +97,10 @@ server() {
   open "http://localhost:${1}" && nohup python -m SimpleHTTPServer $1 &
 }
 
+gw () {
+    git lol -${1:-8}; git number
+}
+
 alias ll='ls -lhF'
 alias ee='emacsclient -n'
 alias gn='git number'
