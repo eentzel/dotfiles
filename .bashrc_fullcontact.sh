@@ -43,7 +43,7 @@ tail_pull () {
 alias finn="cd ~/Projects/address-book/finn"
 alias abox="cd ~/Projects/address-book/abox"
 alias cab="cd ~/Projects/address-book-v2"
-alias webapp="cd ~/Projects/addressbook-webap"
+alias webapp="cd ~/Projects/addressbook-webapp"
 alias legacy="cd ~/Projects/fullcontact-api"
 
 alias coffee_time="rm -rf ~/.grails/.slcache && grails clean && grails -noreloading run-app"
