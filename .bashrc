@@ -35,6 +35,11 @@ fi
 # docker
 export DOCKER_HOST=tcp://localhost:4243
 
+ # added by Nix installer
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+    . ~/.nix-profile/etc/profile.d/nix.sh;
+fi
+
 if [ $EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
