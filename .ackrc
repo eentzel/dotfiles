@@ -16,6 +16,7 @@
 --type-set=jsp=.jsp,.jspx,.jhtm,.jhtml,.tag
 --type-set=groovy=.groovy,.gradle
 --type-set=haml=.haml
+--type-set=md=.md
 
 # built-in types that I'd like to make a bit broader:
 --type-set=css=.css,.scss,.less
