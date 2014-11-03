@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# wrapper for emacsclient that supplies the correct args based on whether
+# or not we're alread inside emacs
+
+if [ -z $EMACS ]; then
+    exec emacsclient -t "$@"
+else
+    exec emacsclient "$@"
+fi
