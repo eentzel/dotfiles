@@ -25,3 +25,4 @@
 --ignore-dir=classes
 --ignore-dir=build
 --ignore-dir=.tmp
+--ignore-dir=env
