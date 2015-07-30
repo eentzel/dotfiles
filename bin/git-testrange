@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+if [ "$#" -lt 3 ]; then
+    echo "Usage: $(basename $0) <sha> <sha> <testCmd>"
+    echo "runs testCmd on every commit between the two specified"
+    exit 64
+fi
+
+C1=$1; shift
+C2=$1; shift
+
+for C in $(git log --oneline --reverse $C1..$C2 | cut -d' ' -f1); do
+    git checkout $C
+    $@
+done
