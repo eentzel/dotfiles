@@ -44,6 +44,7 @@ export DOCKER_HOST=tcp://localhost:4243
  # added by Nix installer
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
     . ~/.nix-profile/etc/profile.d/nix.sh;
+    export NIX_PATH=~/3rdparty/nixpkgs
 fi
 
 if [ $EMACS ]; then
