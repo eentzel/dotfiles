@@ -15,7 +15,6 @@ source ~/.colors.sh
 export PATH=~/bin:$PATH
 export PATH=~/bin/SmallerMaker:$PATH
 export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
 
 export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
@@ -23,6 +22,13 @@ export SVN_EDITOR=emacsclient
 # for node.js
 export PATH=$PATH:/usr/local/share/npm/bin
 export NODE_PATH=/usr/local/lib/node_modules
+
+# for mysql
+if [ -d /usr/local/mysql ]; then
+    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
+    export PATH=/usr/local/mysql/bin:$PATH
+fi
+
 
 # for golang
 export GOPATH=$HOME/mygo
