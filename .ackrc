@@ -15,6 +15,7 @@
 --type-set=feature=.feature
 --type-set=jsp=.jsp,.jspx,.jhtm,.jhtml,.tag
 --type-set=groovy=.groovy,.gradle
+--type-set=gradle=.gradle
 --type-set=haml=.haml
 --type-set=md=.md
 
