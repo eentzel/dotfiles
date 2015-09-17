@@ -812,6 +812,18 @@ _git_bundle ()
 	esac
 }
 
+_git_fwd ()
+{
+	__gitcomp "$(__git_refs)"
+}
+
+_git_testrange ()
+{
+	__git_has_doubledash && return
+
+	__gitcomp "$(__git_refs)"
+}
+
 _git_checkout ()
 {
 	__git_has_doubledash && return
@@ -2100,6 +2112,8 @@ _git ()
 	[ "$expansion" ] && command="$expansion"
 
 	case "$command" in
+	fwd)         _git_fwd ;;
+	testrange)   _git_testrange ;;
 	am)          _git_am ;;
 	add)         _git_add ;;
 	apply)       _git_apply ;;
