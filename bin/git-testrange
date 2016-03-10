@@ -15,3 +15,5 @@ for C in $(git log --oneline --reverse "$C1".."$C2" | cut -d' ' -f1); do
     git checkout "$C"
     "$@"
 done
+
+git checkout "$C2"
