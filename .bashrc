@@ -19,6 +19,8 @@ export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export EDITOR="emacsclient -t"
 export SVN_EDITOR=emacsclient
 
+export MANPATH=$MANPATH:/usr/local/man
+
 # for node.js
 export PATH=$PATH:/usr/local/share/npm/bin
 export NODE_PATH=/usr/local/lib/node_modules
