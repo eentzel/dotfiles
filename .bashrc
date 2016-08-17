@@ -134,6 +134,7 @@ gw () {
 alias ll='ls -lhF'
 alias ee='emacsclient -n'
 alias gn='git number'
+alias gne="git number -c 'emacsclient -n'"
 alias be='bundle exec'
 alias json_pretty="python -mjson.tool"
 alias nonascii='grep --color="auto" -P -n "[\x80-\xFF]"'
