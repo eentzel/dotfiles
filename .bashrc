@@ -41,6 +41,10 @@ if [ -d ~/3rdparty/packer ]; then
     export PATH=$PATH:~/3rdparty/packer
 fi
 
+if [ -d ~/3rdparty/go_appengine ]; then
+    export PATH=$PATH:~/3rdparty/go_appengine
+fi
+
 # docker
 export DOCKER_HOST=tcp://localhost:4243
 
