@@ -58,6 +58,13 @@ function java_version() {
     java -version 2>&1 | grep "java version" | grep -o  "1\.[0-9]\.[0-9_]*"
 }
 
+__ecp () {
+    local EXIT="$?"
+    if [ $EXIT -ne 0 ]; then
+        echo "($EXIT) "
+    fi
+}
+
 if [ $EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
@@ -65,7 +72,7 @@ if [ $EMACS ]; then
     # as do colored prompts
     export PS1="\u@\h:\w\$(__git_ps1)\$ "
 else
-    export PS1="\[\033]0;\w\007\]\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\] (\$(java_version))\$ "
+    export PS1="\[\033]0;\w\007\]\[$txtred\]\$(__ecp)\[$txtrst\]\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\] (\$(java_version))\$ "
 fi
 
 # Setting PATH for MacPython 2.6
