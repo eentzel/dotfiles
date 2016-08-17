@@ -29,6 +29,9 @@ if [ -d /usr/local/mysql ]; then
     export PATH=/usr/local/mysql/bin:$PATH
 fi
 
+if [ -f ~/.opam/opam-init/init.sh ]; then
+    . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null
+fi
 
 # for golang
 export GOPATH=$HOME/mygo
