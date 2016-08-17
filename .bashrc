@@ -47,9 +47,6 @@ if [ -d ~/3rdparty/go_appengine ]; then
     export PATH=$PATH:~/3rdparty/go_appengine
 fi
 
-# docker
-export DOCKER_HOST=tcp://localhost:4243
-
  # added by Nix installer
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
     . ~/.nix-profile/etc/profile.d/nix.sh;
