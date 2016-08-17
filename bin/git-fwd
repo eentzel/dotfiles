@@ -6,7 +6,7 @@ set -e
 # (because, e.g., a branch doesn't exist or couldn't be rebased cleanly)
 
 if [ "$#" -lt 1 ]; then
-    echo "Usage: $(basename $0) <branch1> [... <branchN>]"
+    echo "Usage: $(basename "$0") <branch1> [... <branchN>]"
     echo "rebases branches 1-N onto the current branch"
     exit 64
 fi
@@ -20,8 +20,8 @@ fi
 ONTO=$(git rev-parse --abbrev-ref HEAD)
 
 for B in "$@"; do
-    git checkout $B
-    git rebase --ignore-date $ONTO
+    git checkout "$B"
+    git rebase --ignore-date "$ONTO"
 done
 
-git checkout $ONTO
+git checkout "$ONTO"
