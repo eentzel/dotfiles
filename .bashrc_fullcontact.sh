@@ -17,10 +17,6 @@ export AWS_AUTO_SCALING_HOME=~/3rdparty/AutoScaling-1.0.61.5
 export AWS_ELB_HOME=~/3rdparty/ElasticLoadBalancing-1.0.34.0
 export PATH=${PATH}:${AWS_AUTO_SCALING_HOME}/bin:${AWS_ELB_HOME}/bin
 
-push_dashboard () {
-    curl http://${1}:9090/watch?rows=$(tput lines)
-}
-
 post_contact () {
     curl -i -H "Content-type: application/json" -d @${1} \
         "https://api.fullcontact.com/v2/contactLists/${2}/?accessToken=${3}"
@@ -40,9 +36,6 @@ tail_pull () {
         | jq -r 'select(.facility == "switchboard-pull") | "\(.["@timestamp"]) \(.["pullRequest.source"]) \(.message)"'
 }
 
-alias finn="cd ~/Projects/address-book/finn"
-alias abox="cd ~/Projects/address-book/abox"
-alias cab="cd ~/Projects/address-book-v2"
 alias webapp="cd ~/Projects/addressbook-webapp"
 alias legacy="cd ~/Projects/fullcontact-api"
 
