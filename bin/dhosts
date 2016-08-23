@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+  echo "$0: service"
+  exit 64
+fi
+
+# tag:Name is regexp match on $1
+HOSTS=$(aws ec2 describe-instances  \
+  --filters "Name=tag:Name,Values=$1" "Name=instance-state-name,Values=running" \
+  --query "Reservations[*].Instances[*].PrivateIpAddress" \
+  --output text \
+  |  tr '\t' '\n')
+printf "%s\n" "${HOSTS[@]}"

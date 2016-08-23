@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SSH_USER=eric
+
+if [ $# -ne 2 ]; then
+  echo "$0: service command"
+  exit 64
+fi
+
+HOSTS=$(dhosts $1)
+HOST_COUNT=$(echo "$HOSTS" | wc -l | tr -d ' ')
+echo "$HOSTS" | xargs -P$HOST_COUNT -I{} ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $SSH_USER@{} $2
