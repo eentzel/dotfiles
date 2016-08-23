@@ -1,6 +1,7 @@
-export JAVA6=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-export JAVA7=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
-export JAVA8=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+export JAVA6=$(/usr/libexec/java_home -v 1.6)
+export JAVA7=$(/usr/libexec/java_home -v 1.7)
+export JAVA8=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$JAVA8
 
 export GRADLE_HOME=~/3rdparty/gradle
 export PATH=${PATH}:${GRADLE_HOME}/bin
