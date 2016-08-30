@@ -1,0 +1,26 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    editor = smartmacs
+[diff]
+    mnemonicprefix = true
+    algorithm = histogram
+[log]
+    decorate = true
+[alias]
+    s = status --short
+    co = checkout
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lom = log --graph --decorate --pretty=oneline --abbrev-commit master~..HEAD
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[user]
+    name = Eric Entzel
+    email = eric@ubermac.net
+[push]
+    default = simple
+[rerere]
+    enabled = true
+[pull]
+    ff = only
