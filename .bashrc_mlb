@@ -1,0 +1,10 @@
+# -*- mode: sh; -*-
+
+export JAVA7=$(/usr/libexec/java_home -v 1.7)
+export JAVA8=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$JAVA8
+
+# added by Nix installer
+if [ -e /Users/eric.entzel/.nix-profile/etc/profile.d/nix.sh ]; then
+    . /Users/eric.entzel/.nix-profile/etc/profile.d/nix.sh;
+fi
