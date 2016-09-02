@@ -96,7 +96,7 @@ export HISTTIMEFORMAT='%F %T '
 export HISTSIZE=100000
 
 # rbenv
-if [ -f HOME/.rbenv/bin ]; then
+if [ -d ~/.rbenv/bin ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
 fi
 if which rbenv > /dev/null; then
