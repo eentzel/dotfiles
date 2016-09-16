@@ -24,3 +24,5 @@
     enabled = true
 [pull]
     ff = only
+[rebase]
+    autosquash = true
