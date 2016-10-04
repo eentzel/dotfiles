@@ -3,7 +3,7 @@
 # wrapper for emacsclient that supplies the correct args based on whether
 # or not we're already inside emacs
 
-if [ -z $EMACS ]; then
+if [ -z $INSIDE_EMACS ]; then
     exec emacsclient -t "$@"
 else
     exec emacsclient "$@"

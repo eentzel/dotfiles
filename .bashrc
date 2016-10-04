@@ -64,7 +64,7 @@ __ecp () {
     fi
 }
 
-if [ $EMACS ]; then
+if [ $INSIDE_EMACS ]; then
     # when running a shell inside emacs, pager just gets in the way
     export PAGER=cat
 
