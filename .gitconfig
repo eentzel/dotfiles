@@ -14,7 +14,7 @@
     co = checkout
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lom = log --graph --decorate --pretty=oneline --abbrev-commit master~..HEAD
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --exclude=refs/stash --all
 [user]
     name = Eric Entzel
     email = eric@ubermac.net
