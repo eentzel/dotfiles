@@ -10,3 +10,6 @@ if [ -e /Users/eric.entzel/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 
 export M2_HOME=~/3rdparty/maven
+if [ -e ~/3rdparty/finto_scripts/finto-helpers.sh ]; then
+    . ~/3rdparty/finto_scripts/finto-helpers.sh
+fi
