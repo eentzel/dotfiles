@@ -30,7 +30,7 @@ main () {
     cd $DIR
     ORIGIN="$(git config --get remote.origin.url)"
     [ "${ORIGIN#*github}" == "$ORIGIN" ] && die 65 "Git URL for 'origin' ($ORIGIN) does not appear to be GitHub"
-    PROJ_URL="$(echo $ORIGIN | sed 's,^git@github.com:,https://github.com/,' | sed 's,.git$,,')"
+    PROJ_URL="$(echo $ORIGIN | sed 's,^git@github.com:,https://github.com/,' | sed 's,^git@github.mlbam.net:,https://github.mlbam.net/,' | sed 's,.git$,,')"
     URL="${PROJ_URL}/blob/$(git rev-parse HEAD)${FILEPATH##$DIR}#L${LN}"
     open "$URL"
 }
