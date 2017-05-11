@@ -69,7 +69,7 @@ if [ $INSIDE_EMACS ]; then
     # as do colored prompts
     export PS1="\u@\h:\w\$(__git_ps1)\$ "
 else
-    export PS1="\[\033]0;\w\007\]\[$txtred\]\$(__ecp)\[$txtrst\]\h:\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\] (\$(java_version))\$ "
+    export PS1="\[\033]0;\w\007\]\[$txtred\]\$(__ecp)\[$txtrst\]\[$txtylw\]\w\[$txtcyn\]\$(__git_ps1)\[$txtrst\]\$ "
 fi
 
 # Setting PATH for MacPython 2.6
