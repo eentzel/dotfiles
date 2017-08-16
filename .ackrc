@@ -24,6 +24,7 @@
 
 # ignore build artifacts by default:
 --ignore-dir=classes
+--ignore-dir=target
 --ignore-dir=build
 --ignore-dir=.tmp
 --ignore-dir=env
