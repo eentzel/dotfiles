@@ -11,11 +11,7 @@ if [ "$#" -lt 1 ]; then
     exit 64
 fi
 
-DIFFS="$(git status --untracked-files=no --porcelain)"
-if [ -n "$DIFFS" ]; then
-    echo "$DIFFS"
-    exit 65
-fi
+git diff-index --exit-code --name-status HEAD || exit 65
 
 ONTO=$(git rev-parse --abbrev-ref HEAD)
 
