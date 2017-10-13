@@ -135,3 +135,7 @@ alias ee='emacsclient -n'
 alias gn='git number'
 alias gne="git number -c 'emacsclient -n'"
 alias nonascii='grep --color="auto" -P -n "[\x80-\xFF]"'
+
+passphrase () {
+    < /usr/share/dict/words awk 'BEGIN {srand()} !/^$/ { if (rand() <= .00003) print $0}' | sort --random-sort
+}
