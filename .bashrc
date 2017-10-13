@@ -90,6 +90,8 @@ fi
 # TODO: CDPATH (http://caliban.org/bash/)
 
 shopt -s histappend
+# prefer C-M-e (or M-^ same thing)
+# shopt -s histverify
 export HISTTIMEFORMAT='%F %T '
 export HISTSIZE=100000
 
