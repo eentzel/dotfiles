@@ -1,0 +1,27 @@
+#!/bin/sh
+
+ED=~/.emacs.d
+
+remove_link () {
+    if [ -L $ED ]; then
+        rm $ED
+    else
+        echo "$ED not a symlink, exiting"
+    fi
+}
+
+main () {
+    if [ "s" = "$1" ]; then
+        remove_link
+        ln -s ~/3rdparty/spacemacs $ED
+    elif [ "r" = "$1" ]; then
+        remove_link
+        ln -s ~/.emacs.epe $ED
+    else
+        echo "usage: $(basename "$0") <s|r>"
+        echo "switch emacs config to [s]pacemacs or [r]egular"
+        exit 64
+    fi
+}
+
+main "$@"
