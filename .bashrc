@@ -103,10 +103,6 @@ if command -v rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
 
-if [ -z `command -v wget` ]; then
-    alias wget="echo \"wget is not intalled - faking it with 'curl -o'...\" && curl -LO"
-fi
-
 # locate source for a Python module
 # from: http://chris-lamb.co.uk/2010/04/22/locating-source-any-python-module/
 cdp () {
