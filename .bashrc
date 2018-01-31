@@ -83,7 +83,7 @@ source ~/.git-completion.bash
 # fi
 
 export AWS_CONFIG_FILE=~/.aws-creds
-if which aws_completer > /dev/null && which aws > /dev/null ; then
+if command -v aws_completer > /dev/null && command -v aws > /dev/null ; then
     complete -C aws_completer aws
 fi
 
@@ -99,11 +99,11 @@ export HISTSIZE=100000
 if [ -d ~/.rbenv/bin ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
 fi
-if which rbenv > /dev/null; then
+if command -v rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
 
-if [ -z `which wget` ]; then
+if [ -z `command -v wget` ]; then
     alias wget="echo \"wget is not intalled - faking it with 'curl -o'...\" && curl -LO"
 fi
 
