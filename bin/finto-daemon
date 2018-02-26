@@ -5,7 +5,7 @@ set -euo pipefail
 
 FINTO_PORT=80
 FINTO_PREF=/usr/local
-FINTO_CONF="/Users/eric.entzel/.fintorc"
+FINTO_CONF="${HOME}/.fintorc"
 FINTO_LOG="${FINTO_PREF}/var/log/finto.log"
 
 function die() {
