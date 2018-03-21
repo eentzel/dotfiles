@@ -136,3 +136,7 @@ alias pcli=". ~/3rdparty/pcli/bin/activate"
 passphrase () {
     < /usr/share/dict/words awk 'BEGIN {srand()} !/^$/ { if (rand() <= .00003) print $0}' | sort --random-sort
 }
+
+it2prof() {
+    echo -e "\033]50;SetProfile=$1\a"
+}
