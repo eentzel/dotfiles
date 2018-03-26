@@ -12,9 +12,10 @@
 [alias]
     s = status --short
     co = checkout
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lom = log --graph --decorate --pretty=oneline --abbrev-commit master~..HEAD
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --exclude=refs/stash --all
+    lol = log --graph --decorate --oneline
+    lov =log --graph --decorate --oneline --simplify-by-decoration
+    lom = log --graph --decorate --oneline master~..HEAD
+    lola = log --graph --decorate --oneline --exclude=refs/stash --all
 [user]
     name = Eric Entzel
     email = eric@ubermac.net
