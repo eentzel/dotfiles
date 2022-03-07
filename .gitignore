@@ -2,6 +2,7 @@ Applications
 Desktop
 Documents
 Downloads
+IdeaProjects
 Movies
 Music
 Pictures
@@ -12,6 +13,8 @@ Projects
 Dropbox
 mygo
 .DS_Store
+.IdeaIC2017.3
+.IdeaIC2018.1
 .Rproj.user
 .Trash
 .Xauthority
@@ -29,7 +32,6 @@ mygo
 .docker
 .dropbox
 .emacs-backups
-.emacs.d
 .gem
 .ghc
 .glide
